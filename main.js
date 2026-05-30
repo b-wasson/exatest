@@ -11,15 +11,15 @@ const backBtn = document.getElementById("backBtn");
 
 let a, b, answer;
 let score = 0;
-let timeleft = 120;
+let timeleft = 60;
 let interval;
 
 startBtn.addEventListener("click", function() {
     score = 0;
-    timeleft = 120;
+    timeleft = 60;
     scoreEl.textContent = "Score: 0";
     startscreen.style.display = "none";
-    gamescreen.style.display = "block";
+    gamescreen.style.display = "flex";
     newQuestion();
     input.focus();
     startTimer();
@@ -62,16 +62,16 @@ function newQuestion() {
         answer = a - b;
     }
     if (op === "*") {
-        b = Math.floor(Math.random() * 12) + 1;
+        b = Math.floor(Math.random() * 11) + 2;
         answer = a * b;
     }
     if (op === "/") {
-        b = Math.floor(Math.random() * 12) + 1;
+        b = Math.floor(Math.random() * 11) + 2;
         answer = a;
         a = a * b;
     }
 
-    question.textContent = a + " " + op + " " + b + " = ?";
+    question.textContent = a + " " + op + " " + b;
     input.value = "";
     input.focus();
 }
