@@ -78,6 +78,7 @@ function newQuestion() {
 
 function startTimer() {
     const timer = document.getElementById("timer");
+    timer.textContent = timeleft + " sec";
     interval = setInterval(function() {
         timeleft--;
         timer.textContent = timeleft + " sec";
@@ -85,7 +86,8 @@ function startTimer() {
             clearInterval(interval);
             saveStats(score);
             gamescreen.style.display = "none";
-            startscreen.style.display = "flex";
+            statsscreen.style.display = "flex";
+            showStats();
         }
     }, 1000);
 }
@@ -113,6 +115,7 @@ function showStats() {
     document.getElementById("statGames").textContent = gamesPlayed;
     document.getElementById("statBest").textContent = bestScore;
     document.getElementById("statAvg").textContent = avg;
+    document.getElementById("statLast").textContent = history.length > 0 ? history[history.length - 1] : 0;
 
     drawChart(history);
 }
