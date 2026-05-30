@@ -13,3 +13,5 @@ The game picks a random operation (addition, subtraction, multiplication, or div
 - **JavaScript** — all game logic (question generation, timer, score tracking)
 - **localStorage** — saves your score history between sessions so stats persist across games
 - **Canvas API** — draws the score history chart on the stats screen
+
+Available to play at exatest.benwasson.com 
