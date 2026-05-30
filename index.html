@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exatest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="startscreen">
+      <h1>Exatest</h1>
+      <button id="startBtn">Start Game</button>
+      <button id="statsBtn">Stats</button>
+    </div>
+
+    <div id="game" style="display: none;">
+      <p id="timer">120</p>
+      <p id="score">Score: 0</p>
+      <p id="question"></p>
+      <input id="answer" type="number" placeholder="your answer" />
+    </div>
+
+    <div id="statsscreen" style="display: none;">
+      <h1>Stats</h1>
+      <p>Games played: <span id="statGames">0</span></p>
+      <p>Best score: <span id="statBest">0</span></p>
+      <p>Average score: <span id="statAvg">0</span></p>
+      <canvas id="scoreChart" width="380" height="180"></canvas>
+      <button id="backBtn">Back</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  background: linear-gradient(135deg, #2C3930, #3F4F44, #2C3930);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #DCD7C9;
+}
+
+/* ── Card ── */
+
+#startscreen, #game, #statsscreen {
+  background: rgba(44, 57, 48, 0.6);
+  border: 1px solid rgba(220, 215, 201, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── Start screen ── */
+
+#statsscreen h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #DCD7C9, #A27B5C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#statsscreen p {
+  font-size: 1.1rem;
+  color: #DCD7C9;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(220, 215, 201, 0.1);
+  padding-bottom: 12px;
+}
+
+#statsscreen span {
+  color: #A27B5C;
+  font-weight: 700;
+}
+
+#scoreChart {
+  width: 100%;
+  border-radius: 12px;
+  background: rgba(44, 57, 48, 0.6);
+  border: 1px solid rgba(220, 215, 201, 0.1);
+}
+
+#backBtn {
+  background: transparent;
+  color: #DCD7C9;
+  border: 2px solid #A27B5C;
+  padding: 14px 48px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  font-family: "JetBrains Mono", monospace;
+  transition: transform 0.1s, background 0.1s, color 0.1s;
+  margin-top: 8px;
+}
+
+#backBtn:hover {
+  background: #A27B5C;
+  color: #2C3930;
+  transform: scale(1.03);
+}
+
+#startscreen h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #DCD7C9, #A27B5C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#startBtn {
+  background: #A27B5C;
+  color: #DCD7C9;
+  border: none;
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.1s, background 0.1s;
+}
+
+#startBtn:hover {
+  background: #8a6449;
+  transform: scale(1.03);
+}
+
+#statsBtn {
+  background: transparent;
+  color: #DCD7C9;
+  border: 2px solid #A27B5C;
+  padding: 14px 48px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.1s, background 0.1s, color 0.1s;
+}
+
+#statsBtn:hover {
+  background: #A27B5C;
+  color: #2C3930;
+  transform: scale(1.03);
+}
+
+/* ── Game screen ── */
+
+#timer {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #A27B5C;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#score {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #DCD7C9;
+}
+
+#question {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin: 16px 0;
+  color: #DCD7C9;
+}
+
+#answer {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid #3F4F44;
+  outline: none;
+  padding: 8px 0;
+  color: #DCD7C9;
+  transition: border-color 0.2s;
+}
+
+#answer:focus {
+  border-color: #A27B5C;
+}
+
+/* hide number input arrows */
+#answer::-webkit-outer-spin-button,
+#answer::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
