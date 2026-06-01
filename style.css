@@ -98,3 +98,35 @@ button:hover {
   border-radius: 4px;
   background: #1a1a1a;
 }
+
+@media (max-width: 480px) {
+  #startscreen, #game, #statsscreen {
+    gap: 32px;
+    padding: 32px 24px;
+  }
+
+  #startscreen h1, #statsscreen h1 {
+    font-size: 3rem;
+  }
+
+  button {
+    font-size: 1.4rem;
+    padding: 12px 0;
+  }
+
+  #timer, #score {
+    font-size: 1.2rem;
+  }
+
+  #question {
+    font-size: 5rem;
+  }
+
+  #answer {
+    font-size: 3rem;
+  }
+
+  #statsscreen p {
+    font-size: 1.2rem;
+  }
+}
